@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic details</title>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="calculateTotalSalary()">
+       <p>Enter basic Salary : <input type="number" name="salary" id="salary"> 
+        <input type="button" value="Generate" name="Generate" id="submit"></p>
+
+        <p id="hra">HRA (30%)></p>
+        <p id="medical">Meidcal (10%)</p>
+        <p id="Travel">Travel (5%) </p>
+        <p id="tds">TDS (10%)</p>
+        <p id="total">Total salary</p>
+    </form>
+    
+
+    <script>
+        function calculateTotalSalary(){
+            var gen = document.getElementById("salary").value;
+             document.getElementById("hra").innerHTML = ((30/gen)*100);
+             document.getElementById("travel").innerHTML = ((5/gen)*100)
+             document.getElementById("medical").innerHTML =((10/gen)*100)
+              document.getElementById("tds").innerHTML =((10/gen)*100)
+
+        //    var gross = gen + hra + travel +medical;
+        //    var net = gross-tds;
+ 
+
+            var total = (gen + hra + travel + medical) - tds;
+            return (`calculate total salary is ${total}`);
+        }
+    </script>
+</body>
+</html>

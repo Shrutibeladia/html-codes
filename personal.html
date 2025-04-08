@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+</head>
+<body>
+    <style>
+        form{
+            margin: auto;
+            border: 3px solid black;
+            text-align: center;
+            width: 300px;
+            padding: 50px;
+        }
+    </style>
+    <form action="Academic.html" onsubmit="personalData()">
+    <h2>Personal Details</h2>
+    <p>Name : <input type="text" placeholder="name" id="name"></p>
+    <p>Age : <input type="number" placeholder="number" id="age"></p>
+    <p>DOB : <input type="date" placeholder="Date of birth" id="dob"></p>
+    <p>Email : <input type="email" placeholder="email" id="email"></p>
+    <p><input type="submit" placeholder="next" value="submit"></p>
+    </form>
+
+<script>
+    function personalData(){
+        var name = document.getElementById('name').value;
+        sessionStorage.setItem('name',name);
+        var age = document.getElementById('age').value;
+        sessionStorage.setItem('age',age);
+        var dob = document.getElementById('dob').value;
+        sessionStorage.setItem('dob',dob);
+        var email = document.getElementById('email').value;
+        sessionStorage.setItem('email',email);
+    }
+</script>
+</body>
+</html>

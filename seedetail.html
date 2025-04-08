@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User detail page</h1>
+   <div id="result">
+        <p id="first">Name : </p>
+        <p id="second">Age : </p>
+        <p id="third">Salary : </p>
+    
+   </div>
+        
+
+    <script>
+        window.onload = function() {
+               document.getElementById('first').innerText = localStorage.getItem('name');
+                document.getElementById('second').innerText = localStorage.getItem('age');
+                document.getElementById('third').innerText = localStorage.getItem('salary');
+        };
+    </script>
+
+     <form action="detail.html">
+        <button >Go Back</button>
+    </form>
+</body>
+</html>

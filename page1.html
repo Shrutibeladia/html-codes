@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        form{
+width: 300px;
+ border: 3px solid black;
+ padding: 50px;
+ margin:auto;
+ text-align: center;
+        }
+    .heading{
+        text-align: center;
+    }
+        </style>
+<h1 class="heading">Test</h1>
+<form action="page2.html" onchange="data()">
+    <p>Who is the President of India ? </p>
+    <p>correct option : 
+        <select name="select" id="select">
+      <option value="1">Narendra Modi</option>
+      <option value="2">Droupadi Murmu </option>
+        <option value="3">Amit Shah</option>
+        </select>
+    </p>
+    <p><input type="submit" value="next" name="submit"></p>
+</form>
+<script>
+    function data(){
+        var ans = document.getElementById('select').value;
+        if(ans==2){
+            sessionStorage.hits = 1;
+            
+        }else{
+            sessionStorage.hits=0;
+        }
+        console.log(sessionStorage.hits );
+        sessionStorage.setItem('ans',sessionStorage.hits);
+        console.log(sessionStorage.getItem('ans'));
+    }
+</script>
+
+</body>
+</html>

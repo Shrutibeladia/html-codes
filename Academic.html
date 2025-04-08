@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Academic Data</title>
+</head>
+<body>
+    <style>
+        form{
+            margin: auto;
+            border: 3px solid black;
+            text-align: center;
+            width: 300px;
+            padding: 50px;
+        }
+    </style>
+    <form action="finaldata.html" onsubmit="finalData()">
+    <h2>Personal Details</h2>
+    <p>Qualification : <select name="qualify" id="qualify">
+           <option>B.E CSE</option>
+           <option>B.Tech CSE</option>
+           <option>BCA</option>
+           <option>MCA</option>
+    </select></p>
+    <p><input type="submit" placeholder="next" value="submit"></p>
+    </form>
+    <script>
+        function finalData(){
+            var qualify = document.getElementById('qualify').value;
+            sessionStorage.setItem('qualify',qualify);
+        }
+    </script>
+</body>
+</html>

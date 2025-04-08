@@ -1,0 +1,35 @@
+<!--IT help[desk request-->
+
+<html>
+    <head>
+        <title>
+            Form 5
+        </title>
+    </head>
+    <body>
+        <style>
+            form{
+    width: 300px;
+     border: 3px solid black;
+     padding: 50px;
+     margin: 20px;
+            }
+            </style>
+        <form>
+            <marquee><h3>IT Helpdesk Request</h3></marquee>
+            
+            <p>Name: <input type="text" name="name"></p>
+            <p>Issue Type :
+                <select name="issue">
+                    <option>System</option>
+                    <option>Software</option>
+                    <option>Network</option>
+                </select>
+            </p>
+            <p>Description :<br/>
+                <textarea name="desc" rows="5" cols="40"></textarea>
+            </p>
+            <p><input type="submit" value="submit ticket"></p>
+        </form>
+    </body>
+</html>

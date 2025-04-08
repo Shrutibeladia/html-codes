@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Patient Registration Form</h2>
+    <form action="#" method="post" onsubmit="validateForm();">
+        <p>Name <br/>
+            <input type="text" name="fname" id="name">
+        </p>
+        <p>Age <br/>
+            <input type="text" name="fage" id="age">
+        </p>
+        <p>email <br/>
+            <input type="email" name="femail" id="email">
+        </p>
+        <p>Discription <br/>
+        <textarea name="discription" id="dis">write something </textarea></p>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+
+    <script>
+     function validateForm(){
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
+        var dis = document.getElementById("dis").value;
+        if(name=="" || age=="" || email=="" || dis==""){
+            alert("please fill above details");
+        }
+        if(isNaN(age)){
+            alert("Age must be a number");
+        }
+        var emailPattern =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailPattern.test(email))
+        {
+            alert("invalid email format")
+        }
+    }
+    </script>
+</body>
+</html>

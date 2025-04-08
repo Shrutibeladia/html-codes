@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      .hea{
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+    <h1 class="hea">Test Score!!</h1>
+<p id="one"></p>
+<p id="two"></p>
+
+    <script>
+        // if(sessionStorage.hits){
+        //     sessionStorage.hits = Number(sessionStorage.hits)+1;
+        // }else{
+        //     sessionStorage.hits=1;
+        // }
+        // document.write("total Hits :" + sessionStorage.hits);
+        var one=sessionStorage.getItem('ans');
+        var two=sessionStorage.getItem('ans1');
+        if(one==1)
+        {
+          document.getElementById('one').textContent='Q1: Correct';
+        }
+        else{
+          document.getElementById('one').textContent='Q1: InCorrect';
+        }
+
+        if(two==1){
+          document.getElementById('two').textContent='Q2: Correct';
+        }
+        else{
+          document.getElementById('two').textContent='Q2: InCorrect';
+        }
+    </script>
+</body>
+</html>

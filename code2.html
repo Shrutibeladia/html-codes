@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case study 1</title>
+</head>
+<body>
+
+
+    <h1>result</h1>
+    <form action="#" method="post" onsubmit="checkStudentPerformance()">
+        <p>Math : <input type="number" name="maths" id="math"></p>
+        <p>Science : <input type="number" name="science" id="sci"></p>
+        <p>politics : <input type="number" name="politics" id="poli"></p>
+        <!-- <p>result : <input type="number" name="maths" id="avg"></p> -->
+        <button type="submit" class="submit">Submit</button>
+    </form>
+    <!--Create a javascript function that 
+   1. accepts three subject scores as input
+  2.  calculate the average score
+  3.  displays a message showing the average and whether the student passed or failed-->
+
+<script>
+
+    function checkStudentPerformance(){
+        var score1 = parseFloat(document.getElementById("math").value);
+        var score2 = parseFloat(document.getElementById("sci").value);
+        var score3 = parseFloat(document.getElementById("poli").value);
+ 
+
+        let average =(score1 + score2 +score3) / 3;
+        let result = (average >=60)?("congratulations !! you passed the examination") : ("Oops! Better Luck next time , failed");
+        return alert( `Average: ${average.toFixed(2)} - ${result}`);
+    }
+</script>
+</body>
+</html>

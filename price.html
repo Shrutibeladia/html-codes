@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel room Booking</title>
+</head>
+<body>
+    <h1>Check Price</h1>
+
+        <p>Room Type :
+            <select  id="roomtype">
+               <option value="deluxac">Delux Ac</option>
+               <option value="deluxnonac">Delux non-Ac</option>
+               <option value="roomac">Room Ac</option>
+               <option value="familyac">Room Ac family</option>
+            </select>
+        </p>
+
+
+        <p>Nights : <input type="number" id="night"></p>
+
+         <p><button type="button" onclick="calculatePrice()">Calculate price:</button></p>
+
+         <p id="price"></p>
+    <script src="hotel.js"></script>
+</body>
+</html>

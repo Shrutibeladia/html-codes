@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <h1>User detail page</h1>
+       <div id="result">
+            <p id="first">Name : </p>
+            <p id="second">Age : </p>
+            <p id="third">DOB: </p>
+            <p id="fourth">Email : </p>
+            <p id="fifth">Qualification : </p>
+        
+       </div>
+            
+    
+        <script>
+            window.onload = function() {
+                   document.getElementById('first').innerText = sessionStorage.getItem('name');
+                    document.getElementById('second').innerText = sessionStorage.getItem('age');
+                    document.getElementById('third').innerText = sessionStorage.getItem('dob');
+                    document.getElementById('fourth').innerText = sessionStorage.getItem('email');
+                    document.getElementById('fifth').innerText = sessionStorage.getItem('qualify');
+            };
+        </script>
+    
+         <form action="personal.html">
+            <button >Go Back</button>
+        </form>
+</body>
+</html>

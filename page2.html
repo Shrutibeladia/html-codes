@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        form{
+width: 300px;
+ border: 3px solid black;
+ padding: 50px;
+ margin:auto;
+ text-align: center;
+        }
+    .heading{
+        text-align: center;
+    }
+        </style>
+<h1 class="heading">Test</h1>
+<form action="page3.html" onchange="dataS()">
+    <p>Which element contains title in html? </p>
+    <p>correct option : 
+        <select id="select1">
+    <option value="4">Body</option>
+    <option value="5">Head</option>
+        <option value="6">section</option>
+        </select>
+    </p>
+    <p><input type="submit" value="next" name="submit"></p>
+</form>
+<script>
+    function dataS(){
+        var ans1 = document.getElementById('select1').value;
+        if(ans1==5){
+            sessionStorage.hits = 1;
+           
+        }else{
+            sessionStorage.hits=0;
+        }
+        sessionStorage.setItem('ans1',sessionStorage.hits);
+        console.log(sessionStorage.hits );
+        console.log(sessionStorage.getItem('ans1'));
+    }
+</script>
+</body>
+</html>
